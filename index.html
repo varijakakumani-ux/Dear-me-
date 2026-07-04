@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💌 Dear Me</h1>
+    <p class="subtitle">Write a letter to your future self.</p>
+
+    <div class="card">
+
+        <label>Letter Title</label>
+        <input type="text" id="title" placeholder="My Future...">
+
+        <label>Your Message</label>
+        <textarea id="message" rows="8" placeholder="Dear Future Me..."></textarea>
+
+        <label>Unlock Date</label>
+        <input type="date" id="unlockDate">
+
+        <button onclick="saveLetter()">
+            🔒 Lock My Letter
+        </button>
+
+    </div>
+
+    <h2>My Letters</h2>
+
+    <div id="letters"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
