@@ -1,42 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dear Me</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="container">
+<div id="welcomeScreen">
 
     <h1>💌 Dear Me</h1>
-    <p class="subtitle">Write a letter to your future self.</p>
 
-    <div class="card">
+    <p class="tagline">
+        Write today.<br>
+        Open tomorrow.
+    </p>
 
-        <label>Letter Title</label>
-        <input type="text" id="title" placeholder="My Future...">
+    <div id="envelope" onclick="openEnvelope()">
 
-        <label>Your Message</label>
-        <textarea id="message" rows="8" placeholder="Dear Future Me..."></textarea>
+        <div class="top"></div>
 
-        <label>Unlock Date</label>
-        <input type="date" id="unlockDate">
+        <div class="letter">
 
-        <button onclick="saveLetter()">
-            🔒 Lock My Letter
-        </button>
+            ❤️
+
+        </div>
 
     </div>
 
-    <h2>My Letters</h2>
+    <p class="tap">
+        Tap the envelope
+    </p>
 
-    <div id="letters"></div>
+</div>
+
+
+<div id="app" class="hidden">
+
+<header>
+
+<h1>💌 Dear Me</h1>
+
+<button onclick="toggleDarkMode()">
+
+🌙
+
+</button>
+
+</header>
+
+
+<div class="card">
+
+<label>Title</label>
+
+<input id="title">
+
+<label>Your Letter</label>
+
+<textarea id="message"></textarea>
+
+<label>Unlock Date</label>
+
+<input type="date" id="unlockDate">
+
+<button onclick="saveLetter()">
+
+Lock My Letter 🔒
+
+</button>
+
+</div>
+
+<h2>My Letters</h2>
+
+<div id="letters"></div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>

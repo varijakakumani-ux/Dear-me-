@@ -1,3 +1,18 @@
+function openEnvelope(){
+
+    document.getElementById("envelope").classList.add("open");
+
+    setTimeout(function(){
+
+        document.getElementById("welcomeScreen").style.display="none";
+
+        document.getElementById("app").classList.remove("hidden");
+
+    },1200);
+
+}
+
+
 let letters = JSON.parse(localStorage.getItem("letters")) || [];
 
 displayLetters();
