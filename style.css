@@ -11,21 +11,9 @@ font-family:Poppins,sans-serif;
 }
 
 body{
-
-background:linear-gradient(135deg,#d9c7ff,#ffe5ef);
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-overflow-x:hidden;
-
-transition:.5s;
-
+    background:linear-gradient(135deg,#d9c7ff,#ffe5ef);
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
 .hidden{
@@ -35,10 +23,12 @@ display:none;
 }
 
 #welcomeScreen{
-
-text-align:center;
-
-animation:fadeIn 1.5s;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
 
 }
 
@@ -167,14 +157,11 @@ transform:translateY(-120px);
 }
 
 #app{
-
-width:850px;
-
-padding:40px;
-
-animation:fadeIn 1s;
-
+    width:850px;
+    margin:40px auto;
+    padding:40px;
 }
+
 
 header{
 
@@ -300,4 +287,24 @@ transform:translateY(0);
 
 }
 
+}
+
+#letters{
+    margin-top:30px;
+}
+
+#letters .letter{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.savedLetter{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
