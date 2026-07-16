@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dear Me</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
+<!-- Welcome Screen -->
 <div id="welcomeScreen">
 
     <h1>Dear Me</h1>
@@ -23,12 +23,16 @@
     </p>
 
     <div id="envelope" onclick="openEnvelope()">
-    <div class="top"></div>
 
-    <div class="envelopeLetter">💌</div>
+        <div class="top"></div>
 
-    <div class="bottom"></div>
-</div>
+        <div class="letter">
+            💌
+        </div>
+
+        <div class="bottom"></div>
+
+    </div>
 
     <p class="tap">
         Tap the envelope
@@ -36,7 +40,7 @@
 
 </div>
 
-
+<!-- Main App -->
 <div id="app" class="hidden">
 
     <header>
@@ -45,17 +49,24 @@
 
     <div class="card">
 
-        <label>Title</label>
-        <input id="title">
+        <label for="title">Title</label>
+        <input
+            id="title"
+            type="text"
+            placeholder="Enter your letter title">
 
-        <label>Your Letter</label>
-        <textarea id="message"></textarea>
+        <label for="message">Your Letter</label>
+        <textarea
+            id="message"
+            placeholder="Write something for your future self..."></textarea>
 
-        <label>Unlock Date</label>
-        <input type="date" id="unlockDate">
+        <label for="unlockDate">Unlock Date</label>
+        <input
+            id="unlockDate"
+            type="date">
 
         <button onclick="saveLetter()">
-            Lock My Letter
+            🔒 Lock My Letter
         </button>
 
     </div>
@@ -65,3 +76,8 @@
     <div id="letters"></div>
 
 </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
