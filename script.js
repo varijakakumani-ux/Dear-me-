@@ -58,7 +58,7 @@ function displayLetters(){
         let unlock = new Date(letter.unlockDate);
 
         let div = document.createElement("div");
-        div.className = "letter";
+        div.className = "savedLetter";
 
         if(today >= unlock){
 
@@ -73,13 +73,23 @@ function displayLetters(){
                 </button>
             `;
 
-        }else{
+        }else
 
             div.innerHTML = `
-                <h3>${letter.title}</h3>
-                <p class="locked">
-                🔒 Locked until ${letter.unlockDate}
-                </p>
+                <div class="letterHeader" onclick="toggleLetter(${index})">
+                    <h3>${letter.title}</h3>
+                    <span>🔓 Unlocked</span>
+                </div>
+
+                <div class="letterContent" id="content${index}">
+                    <p>${letter.message}</p>
+
+                    <button class="deleteBtn"
+                    onclick="deleteLetter(${index})">
+                        Delete
+                    </button>
+                </div>
+            `;
 
                 <button disabled>
                 Locked
@@ -101,5 +111,17 @@ function deleteLetter(index){
     localStorage.setItem("letters", JSON.stringify(letters));
 
     displayLetters();
+
+}
+
+function toggleLetter(index){
+
+    let content = document.getElementById("content" + index);
+
+    if(content.style.display === "block"){
+        content.style.display = "none";
+    }else{
+        content.style.display = "block";
+    }
 
 }
