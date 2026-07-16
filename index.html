@@ -47,31 +47,33 @@
 </header>
 
 
-<div id="app" class="hidden">
+<div class="card">
 
-    <header>
-        <h1>Dear Me</h1>
-    </header>
+<label>Title</label>
 
-    <div class="card">
+<input id="title">
 
-        <label>Title</label>
-        <input id="title">
+<label>Your Letter</label>
 
-        <label>Your Letter</label>
-        <textarea id="message"></textarea>
+<textarea id="message"></textarea>
 
-        <label>Unlock Date</label>
-        <input type="date" id="unlockDate">
+<label>Unlock Date</label>
 
-        <button onclick="saveLetter()">
-            Lock My Letter
-        </button>
+<input type="date" id="unlockDate">
 
-    </div>
+<button onclick="saveLetter()">
 
-    <h2>My Letters</h2>
-    <div id="letters"></div>
+Lock My Letter
+
+</button>
+
+</div>
+</div>
+</div>
+
+<h2>My Letters</h2>
+
+<div id="letters"></div>
 
 </div>
 

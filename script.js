@@ -58,7 +58,7 @@ function displayLetters(){
         let unlock = new Date(letter.unlockDate);
 
         let div = document.createElement("div");
-        div.className = "savedLetter";
+        div.className = "letter";
 
         if(today >= unlock){
 
