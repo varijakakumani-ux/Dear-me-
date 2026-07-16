@@ -23,12 +23,12 @@
     </p>
 
     <div id="envelope" onclick="openEnvelope()">
+    <div class="top"></div>
 
-        <div class="top"></div>
+    <div class="letter">💌</div>
 
-        <div class="bottom"></div>
-
-    </div>
+    <div class="bottom"></div>
+</div>
 
     <p class="tap">
         Tap the envelope
@@ -39,44 +39,29 @@
 
 <div id="app" class="hidden">
 
-<header>
+    <header>
+        <h1>Dear Me</h1>
+    </header>
 
-<h1>Dear Me</h1>
+    <div class="card">
 
+        <label>Title</label>
+        <input id="title">
 
-</header>
+        <label>Your Letter</label>
+        <textarea id="message"></textarea>
 
+        <label>Unlock Date</label>
+        <input type="date" id="unlockDate">
 
-<div class="card">
+        <button onclick="saveLetter()">
+            Lock My Letter
+        </button>
 
-<label>Title</label>
+    </div>
 
-<input id="title">
+    <h2>My Letters</h2>
 
-<label>Your Letter</label>
-
-<textarea id="message"></textarea>
-
-<label>Unlock Date</label>
-
-<input type="date" id="unlockDate">
-
-<button onclick="saveLetter()">
-
-Lock My Letter
-
-</button>
+    <div id="letters"></div>
 
 </div>
-</div>
-</div>
-
-<div id="letters"></div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>

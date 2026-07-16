@@ -308,27 +308,29 @@ transform:translateY(0);
 
 .savedLetter{
     background:white;
+    padding:20px;
+    margin-top:20px;
     border-radius:15px;
-    margin-bottom:15px;
-    overflow:hidden;
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
 .letterHeader{
-    padding:18px 22px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     cursor:pointer;
 }
 
-.letterHeader h3{
-    margin:0;
-    font-size:22px;
-}
-
 .letterContent{
     display:none;
-    padding:20px;
-    border-top:1px solid #eee;
+    margin-top:15px;
+}
+
+
+.envelopeLetter {
+    /* envelope animation styles */
+}
+
+.open .envelopeLetter {
+    transform: translateY(-120px);
 }

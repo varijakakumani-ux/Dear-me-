@@ -48,7 +48,6 @@ function saveLetter(){
 function displayLetters(){
 
     let area = document.getElementById("letters");
-
     area.innerHTML = "";
 
     let today = new Date();
@@ -58,22 +57,9 @@ function displayLetters(){
         let unlock = new Date(letter.unlockDate);
 
         let div = document.createElement("div");
-        div.className = "letter";
+        div.className = "savedLetter";
 
         if(today >= unlock){
-
-            div.innerHTML = `
-                <h3>${letter.title}</h3>
-                <p class="unlocked">🔓 Unlocked</p>
-                <p>${letter.message}</p>
-
-                <button class="deleteBtn"
-                onclick="deleteLetter(${index})">
-                Delete
-                </button>
-            `;
-
-        }else
 
             div.innerHTML = `
                 <div class="letterHeader" onclick="toggleLetter(${index})">
@@ -81,19 +67,24 @@ function displayLetters(){
                     <span>🔓 Unlocked</span>
                 </div>
 
-                <div class="letterContent" id="content${index}">
+                <div class="letterContent" id="content${index}" style="display:none;">
                     <p>${letter.message}</p>
 
-                    <button class="deleteBtn"
-                    onclick="deleteLetter(${index})">
+                    <button class="deleteBtn" onclick="deleteLetter(${index})">
                         Delete
                     </button>
                 </div>
             `;
 
-                <button disabled>
-                Locked
-                </button>
+        } else {
+
+            div.innerHTML = `
+                <h3>${letter.title}</h3>
+                <p class="locked">
+                    🔒 Locked until ${letter.unlockDate}
+                </p>
+
+                <button disabled>Locked</button>
             `;
 
         }
@@ -114,14 +105,12 @@ function deleteLetter(index){
 
 }
 
-function toggleLetter(index){
-
+function toggleLetter(index) {
     let content = document.getElementById("content" + index);
 
-    if(content.style.display === "block"){
+    if (content.style.display === "block") {
         content.style.display = "none";
-    }else{
+    } else {
         content.style.display = "block";
     }
-
 }
